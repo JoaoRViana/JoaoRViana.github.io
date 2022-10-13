@@ -1,0 +1,38 @@
+body{
+    background-color:#94EBDF;
+    text-align: center;
+    display:block;
+    justify-content: center;
+    font-size: 2em;
+
+}
+.inicio{
+    line-height: 2px;
+    color: #436B66;
+    font-style: oblique;
+}
+.softSkills{
+    font-style:italic;
+}
+.minhaFoto{
+    image-resolution:10;
+    border-radius: 50%;
+    width: 20em;
+}
+
+ul{
+    list-style-type: '🧠';
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    justify-content: center;
+}
+
+.meuNome{
+    color: #4FEED9;
+    text-decoration:double;
+    background-color: #436B66;
+    font-size: 1.5em;
+    padding: 2px 4px 1px;
+    box-shadow: 4px 4px 2px #236B62;
+    
+}
