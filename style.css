@@ -4,7 +4,6 @@ header{
 
 body{
     background-color:#94EBDF;
-    text-align: center;
     font-size: 2em;
 }
 .inicio{
@@ -12,6 +11,7 @@ body{
     font-style: oblique;
 }
 .softSkills{
+    font-family: 'MedievalSharp';
     font-style:italic;
 }
 .minhaFoto{
@@ -19,12 +19,13 @@ body{
     width: 20em;
     border-style:solid;
     border-width: 8px;
-    border-color: #436B66;
+    background:linear-gradient(45deg,#236B62 ,#74B8AF , #436B66);
+    background-color: #236B62;
 
 }
 ul{
+    text-align: center;
     list-style-type: '🧠';
-    font-family: 'Courier New', Courier, monospace;
     display: grid;
     justify-content: center;
 }
@@ -34,11 +35,24 @@ ul{
     text-decoration:double;
     background-color: #436B66;
     font-size: 1.5em;
-    padding: 1px 4px 1px;
+    padding: 1px 4px ;
     box-shadow: 4px 6px 2px #236B62;
     
 }
 .trybe{
     color: #179129;
     text-decoration: dotted;
+}
+.habilidades{
+    font-family: 'MedievalSharp';
+    background:linear-gradient(90deg,#3FA194 ,#4FEED9 , #236B62);
+    position: absolute;
+    top: 250px;
+    left: 800px;
+    padding: 5px 5px;
+    border: dashed #3A5451 3.5px;
+}
+.namePicture{
+    text-align: center;
+    width: 700px;
 }
