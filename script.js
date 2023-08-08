@@ -1,6 +1,6 @@
 const personInfos = {
     title:'Um pouco sobre mim',
-    text:['Prazer sou João Ricardo moro no interior de Minas Gerais na cidade de Lagoa da Prata.','Desenvolvi minhas habilidades na área de programação através do curso de Desenvolvimento Web da TRYBE.','Apartir deste evento me apaixonei por esse mundo e busco sempre aperfeiçoar meus conhecimentos criando projetos pessoais']
+    text:['Prazer sou João Ricardo moro no interior de Minas Gerais em Lagoa da Prata.','Desenvolvi minhas habilidades na área de programação através do curso de Desenvolvimento Web da TRYBE.','Apartir deste evento me apaixonei por esse mundo e busco sempre aperfeiçoar meus conhecimentos criando projetos pessoais']
 }
 const skillsInfo = {
     title: 'Tenho conhecimento sobre as seguintes Tecnologias',
@@ -102,14 +102,14 @@ const getProjects = ()=>{
     linksDiv.className = 'flexWrapAround'
     const repo = document.createElement('a');
     repo.href = projectInfos[projectIndex].repo;
-    repo.href = 'target'
-    repo.innerHTML = `repositório: ${projectInfos[projectIndex].repo}`;
+    repo.target = '_blank'
+    repo.innerHTML = 'repositório';
     linksDiv.appendChild(repo)
     if(projectInfos[projectIndex].live){
         const link = document.createElement('a')
         link.href = projectInfos[projectIndex].live
         link.target = '_blank'
-        link.innerHTML =  `site: ${projectInfos[projectIndex].live}`
+        link.innerHTML =  'site'
         linksDiv.appendChild(link)
     }
     divInfos.appendChild(linksDiv)
@@ -144,11 +144,11 @@ const styledBorderEffect = ()=>{
     }).filter((e)=>(e!== false))
     const secondSplit = arr[index].split('d')
     let border = secondSplit[0];
-    if((+border+6) > 360){
+    if((+border+10) > 360){
         border = 1
     }
-    document.documentElement.style.setProperty('--border',`${(+border +6)}deg`)
+    document.documentElement.style.setProperty('--border',`${(+border +10)}deg`)
 
 }
 styledBorderEffect();
-const timer= setInterval(styledBorderEffect, 200);
+const timer= setInterval(styledBorderEffect, 100);
