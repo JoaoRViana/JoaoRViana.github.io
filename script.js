@@ -131,3 +131,24 @@ projectsBttn.addEventListener('click',()=>{getProjects()})
 
 
 getInfos();
+
+const styledBorderEffect = ()=>{
+    const styledBorder = document.getElementById('SBorder');
+    const styledComputed = window.getComputedStyle(styledBorder);
+    const color  = styledComputed.getPropertyValue('background')
+    const arr = color.split('(');
+    const index = arr.map((e,i)=>{
+        if(e.includes('deg')){
+            return i
+        }return false
+    }).filter((e)=>(e!== false))
+    const secondSplit = arr[index].split('d')
+    let border = secondSplit[0];
+    if((+border+6) > 360){
+        border = 1
+    }
+    document.documentElement.style.setProperty('--border',`${(+border +6)}deg`)
+
+}
+styledBorderEffect();
+const timer= setInterval(styledBorderEffect, 200);
