@@ -12,11 +12,12 @@ const projectInfos = [{
     text:['Este é um aplicativo Pokedex criado em React que permite ao usuário visualizar informações detalhadas sobre diferentes Pokémons.','O usuário pode favoritar, ver a forma shiny, ver os pokemons da região específica, filtrar por tipagem, ver status, habilidades e uma breve descrição do Pokemon.','Além disso, também é possível buscar Pokémons pelo nome ou número da Pokédex.'],
     repo:'https://github.com/JoaoRViana/pokedex',
     live:'https://joaorvianapokedex.netlify.app',
-    image:'./pokedexGif.gif'
+    image:'./pokedex.gif'
 },{
     title:'Mercado Livre',
     text:['É uma plataforma que permite aos usuários pesquisar, visualizar e "comprar" produtos disponíveis na API do Mercado Livre.','Os usuários podem pesquisar produtos na barra de pesquisa do site.','Ao clicar em um produto na lista de resultados da pesquisa, os usuários poderão ver informações detalhadas sobre o produto','Os usuários podem alterar o tema do site. O tema é gerenciado pelo estado global do redux.'],
     repo:'https://github.com/JoaoRViana/mercadoLivre',
+    image:'mercadoLivre.gif',
     live:false,
 }]
 
@@ -36,12 +37,15 @@ const genTitle= (text)=>{
 const getInfos = ()=>{
     resetInfos();
     genTitle(personInfos.title)
+    const divInfoContainer = document.createElement('div')
     personInfos.text.forEach((e)=>{
         const line = document.createElement('p')
         line.className  = 'textMedieval'
         line.innerHTML = e;
-        divInfos.appendChild(line)
+        divInfoContainer.appendChild(line)
     })
+    divInfoContainer.className = 'flexCenter'
+    divInfos.appendChild(divInfoContainer)
 }
 
 const getSkills = ()=>{
@@ -58,8 +62,9 @@ const getSkills = ()=>{
 
 const createBttnsProject = ()=>{
     const nextProject = document.createElement('button');
+    const titleContainer = document.getElementById('titleInfoContainer')
     nextProject.innerHTML = '=>'
-    nextProject.className = 'nextAndPreviousBttn'
+    nextProject.className = 'nextBttn'
     nextProject.addEventListener('click',()=>{
         if((projectIndex +1) >= projectInfos.length){
             projectIndex = 0
@@ -70,7 +75,7 @@ const createBttnsProject = ()=>{
     })
     const previousProject = document.createElement('button');
     previousProject.innerHTML = '<='
-    previousProject.className = 'nextAndPreviousBttn'
+    previousProject.className = 'previousBttn'
     previousProject.addEventListener('click',()=>{
         if(projectIndex <= 0 ){
             projectIndex = (projectInfos.length - 1)
@@ -79,17 +84,20 @@ const createBttnsProject = ()=>{
         }
         getProjects()
     })
-    divInfos.appendChild(previousProject)
-    divInfos.appendChild(nextProject);
+    titleContainer.appendChild(previousProject)
+    titleContainer.appendChild(nextProject);
 }
 
 const getProjects = ()=>{
     resetInfos();
     genTitle('Alguns dos meus Projetos:')
-    createBttnsProject();
+    const divTitle = document.createElement('div')
+    divTitle.id = 'titleInfoContainer'
     const title = document.createElement('h2');
     title.innerHTML = projectInfos[projectIndex].title
-    divInfos.appendChild(title);
+    divTitle.appendChild(title);
+    divInfos.appendChild(divTitle)
+    createBttnsProject();
     projectInfos[projectIndex].text.forEach((e)=>{
         const line =  document.createElement('p');
         line.innerHTML = e;
