@@ -4,7 +4,29 @@ const personInfos = {
 }
 const skillsInfo = {
     title: 'Tenho conhecimento sobre as seguintes Tecnologias',
-    text:['JavaScript','TypeScript','Html','Css','Tailwind','React','Redux','Node','SQL','Express','Docker','Jest','RTL']
+    text:[{
+        name:'JavaScript',
+        img:'https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E'
+    },{
+        name:'TypeScript',
+        img:'https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white'
+    },{name:'Css',img:'https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white'},{
+    name:'Tailwind',
+    img:'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white'
+},{name:'React',img:'https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB'},{
+    name:'Redux',
+    img:'https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white'
+},{
+    name:'Node',
+    img:'https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white'
+},{
+    name:'SQL',
+    img:'https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white',
+},{
+    name:'Express',
+    img:'https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB'
+}],
+    
 }
 
 const projectInfos = [{
@@ -54,7 +76,9 @@ const getSkills = ()=>{
     const list = document.createElement('ul');
     skillsInfo.text.forEach((e)=>{
         const line = document.createElement('li');
-        line.innerHTML = e;
+        const img = document.createElement('img');
+        img.src = e.img
+        line.appendChild(img)
         list.appendChild(line)
     })
     divInfos.appendChild(list)
