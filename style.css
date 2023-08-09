@@ -41,6 +41,12 @@ body{
       }
 }
 
+.flexCenter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .flexWrapAround{
     display: flex;
     flex-wrap: wrap;

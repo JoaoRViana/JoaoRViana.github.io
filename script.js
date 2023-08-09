@@ -115,9 +115,54 @@ const getProjects = ()=>{
     divInfos.appendChild(linksDiv)
 }
 
+const createLinkedinLink = ()=>{
+    const line1 = document.createElement('h3');
+    const linkedin = document.createElement('a')
+    const linkedinContainer = document.createElement('div');
+    linkedin.target = '_blank';
+    linkedin.href = 'https://www.linkedin.com/in/joaoricardoviana/'
+    linkedin.innerHTML = 'joaoricardoviana'
+    line1.innerHTML = `linkedin: `
+    linkedinContainer.className = 'flexCenter'
+    linkedinContainer.appendChild(line1)
+    linkedinContainer.appendChild(linkedin)
+    divInfos.appendChild(linkedinContainer)
+}
+
+const createEmail = ()=>{
+    const line = document.createElement('h3');
+    line.innerHTML = 'Email: joaorviana98@gmail.com'
+    divInfos.appendChild(line)
+}
+
+const createCellNumber=()=>{
+    const line = document.createElement('h3');
+    line.innerHTML = 'Celular: (37) 99817-2080'
+    divInfos.appendChild(line)
+}
+
+const createGithub=()=>{
+    const line = document.createElement('h3');
+    line.innerHTML = 'Github: '
+    const github = document.createElement('a')
+    const githubContainer = document.createElement('div');
+    github.target = '_blank';
+    github.href = 'https://github.com/JoaoRViana'
+    github.innerHTML = 'JoaoRViana'
+    githubContainer.className = 'flexCenter';
+    githubContainer.appendChild(line)
+    githubContainer.appendChild(github)
+    divInfos.appendChild(githubContainer);
+
+}
+
 const getContact = ()=>{
     resetInfos();
     genTitle('Para entrar em contato:')
+    createLinkedinLink();
+    createEmail();
+    createCellNumber();
+    createGithub();
 }
 
 const infoBttn = document.getElementById('infoBttn');
