@@ -10,28 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <title>Portfólio</title>
 </head>
-<header>
-    <h1></h1>
-    <div class="namePicture">
-        <h1 class="inicio">Prazer sou o</h1>
-        <button class="meuNome ">João Ricardo</button> <br><br>
-        <img class="minhaFoto " src="./minhaFoto.png" alt="minha foto" >
-    </div>
-</header>
-    
 <body>
-    <p>Tenho 23 anos e iniciei meus estudos em desenvolvimento web em outubro de 2022 na <a class="trybe" href="https://www.betrybe.com/" target="_blank">Trybe</a>.<br>
-    Sou brasileiro e moro no interior de Minas Gerais em uma cidade chamada Lagoa da Prata</p>
-    <div class="habilidades">
-        <h2 class="softSkills">Minhas melhores Soft Skills:</h3>
-        <ul>
-            <li>Pensamento Criativo</li>
-            <li>Estabilidade Emocional</li>
-            <li>Empatia</li>
-            <li>Capacidade Analítica</li>
-            <li>Ambição</li>
-        </ul>
+        <div class="sideContainer">
+            <div id="SBorder" class="styledBorder"></div>
+            <div class="flexWrapAround bttnContainer">
+                <h2>João Ricardo</h2>
+                <button id="infoBttn">INFORMAÇÕES</button>
+                <button id="skillsBttn">HABILIDADES</button>
+                <button id="projectsBttn">PROJETOS</button>
+                <button id="contactBttn">CONTATAR</button>
+            </div>
+        </div>
+        <div class="mainContainer">
+            <div class="styledBorderBigger"></div>
+            <div id="infos" class="infosContainer"></div>
+        </div>
+        
     </div>
-    
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>
