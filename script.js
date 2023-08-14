@@ -1,6 +1,6 @@
 const personInfos = {
     title:'Um pouco sobre mim',
-    text:['Prazer sou João Ricardo moro no interior de Minas Gerais em Lagoa da Prata.','Desenvolvi minhas habilidades na área de programação através do curso de Desenvolvimento Web da TRYBE.','Apartir deste evento me apaixonei por esse mundo e busco sempre aperfeiçoar meus conhecimentos criando projetos pessoais']
+    text:['Prazer sou um desenvolvedor Web Full Stack e resíduo na cidade Lagoa da Prata no interior de Minas Gerais','Desenvolvi minhas habilidades na área de programação através do curso de Desenvolvimento Web da TRYBE.','Apartir deste evento me apaixonei por esse mundo, busco sempre aperfeiçoar meus conhecimentos estudando mais afundo sobre as linguagens e os frameworks.','Gosto de consolidar meus estudos através da criação de projetos.']
 }
 const skillsInfo = {
     title: 'Tenho conhecimento sobre as seguintes Tecnologias',
