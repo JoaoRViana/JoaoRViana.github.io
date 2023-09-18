@@ -1,6 +1,6 @@
 const personInfos = {
     title:'Um pouco sobre mim',
-    text:['Prazer sou um desenvolvedor Web Full Stack e moro na cidade Lagoa da Prata no interior de Minas Gerais','Desenvolvi minhas habilidades na área de programação através do curso de Desenvolvimento Web da TRYBE.','Apartir deste evento me apaixonei por esse mundo, busco sempre aperfeiçoar meus conhecimentos estudando mais afundo sobre as linguagens e os frameworks.','Gosto de consolidar meus estudos através da criação de projetos.']
+    text:['Prazer, sou um desenvolvedor Web Full Stack e moro na cidade de Lagoa da Prata, no interior de Minas Gerais.','Desenvolvi minhas habilidades na área de programação através do curso de Desenvolvimento Web da TRYBE.','A partir deste evento, me apaixonei por esse mundo, buscando sempre aperfeiçoar meus conhecimentos estudando mais a fundo sobre as linguagens e os frameworks.','Gosto de consolidar meus estudos através da criação de projetos.']
 }
 const skillsInfo = {
     title: 'Tenho conhecimento sobre as seguintes Tecnologias',
@@ -32,7 +32,7 @@ const skillsInfo = {
 const projectInfos = [{
     title:'Pokedex',
     text:['Este é um aplicativo Pokedex criado em React que permite ao usuário visualizar informações detalhadas sobre diferentes Pokémons.','O usuário pode favoritar, ver a forma shiny, ver os pokemons da região específica, filtrar por tipagem, ver status, habilidades e uma breve descrição do Pokemon.','Além disso, também é possível buscar Pokémons pelo nome ou número da Pokédex.'],
-    repo:'https://github.com/JoaoRViana/pokedex',
+    repo:'https://pokedex-joaorviana.vercel.app',
     live:'https://joaorvianapokedex.netlify.app',
     image:'./pokedex.gif'
 },{
@@ -41,6 +41,18 @@ const projectInfos = [{
     repo:'https://github.com/JoaoRViana/mercadoLivre',
     image:'mercadoLivre.gif',
     live:false,
+},{
+    title:'Forca',
+    text:[' Este é um aplicativo simples feito em Next.js que permite jogar o clássico jogo da forca.'],
+    repo:'https://github.com/JoaoRViana/forca',
+    image:'./forca.gif',
+    live:'https://forca-joaorviana.vercel.app'
+},{
+    title:'PokeCard',
+    text:['Esta aplicação permite que você desfrute de uma experiência de jogo de cartas virtual com suas cartas Pokémon.','Você pode criar, editar e gerenciar decks.'],
+    repo:'https://github.com/JoaoRViana/pokeCard',
+    live:'https://pokecard-joaorviana.vercel.app',
+    image:'./pokeCard.gif',
 }]
 
 let projectIndex = 0
