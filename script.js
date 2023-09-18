@@ -153,7 +153,7 @@ const getProjects = ()=>{
         const link = document.createElement('a')
         link.href = projectInfos[projectIndex].live
         link.target = '_blank'
-        link.innerHTML =  'site'
+        link.innerHTML =  'deploy'
         linksDiv.appendChild(link)
     }
     divInfos.appendChild(linksDiv)
