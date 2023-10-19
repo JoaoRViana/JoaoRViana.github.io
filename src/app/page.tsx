@@ -5,11 +5,13 @@ import Contact from "@/components/Contact"
 
 export default function Home() {
   return (
-    <main className="px-[15%] bg-slate-200 font-semibold">
+    <main className="px-[15%] bg-slate-200 styledText font-semibold ">
       <Header />
+      <div className="flex lg:justify-between flex-wrap items-center">
       <AboutMe/>
-      <ProjectsSection />
       <Contact />      
+      </div>
+      <ProjectsSection />
     </main>
   )
 }
