@@ -6,8 +6,7 @@ export default function Header(){
 
             </div>
             <div className="flex justify-around w-[20%]">
-            <a> Projetos</a>
-            <a> Contato</a>
+            <a href="#projectsSection"> Projetos</a>
             </div>
         </div>
     )

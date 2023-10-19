@@ -20,14 +20,14 @@ const allProjects = [
         repositorio:"https://github.com/JoaoRViana/shoppingCart",
     },
     {
-        title:"pokeCard",
+        title:"PokeCard",
         description:"Bem-vindo ao Aplicativo de Jogo de Cartas Pokémon! Esta aplicação permite que você desfrute de uma experiência de jogo de cartas virtual com suas cartas Pokémon. Você pode criar, editar e gerenciar decks, participar de duelos e colecionar várias cartas Pokémon.",
         image:pokeCardGif,
         deploy:"https://pokecard-joaorviana.vercel.app",
         repositorio:"https://github.com/JoaoRViana/pokeCard",
     },
     {
-        title:"forca",
+        title:"Forca",
         description:"Este é um aplicativo simples que permite jogar o clássico jogo da forca.",
         image:forcaGif,
         deploy:"https://forca-joaorviana.vercel.app",
@@ -39,11 +39,11 @@ export default function ProjectsSection(){
     return(
         <div className="mt-8">
             <div className="w-full">
-            <h2 className="mx-auto text-center mb-5">Meus principais projetos</h2>
+            <h1 className="mx-auto text-center mb-5 text-xl">Meus principais projetos</h1>
             </div>
-            <div className="flex justify-around flex-wrap w-full">
+            <div className="flex flex-wrap w-full justify-center" id="projectsSection">
             {allProjects.map((e,i)=>(
-                <div key={i} className="p-2">
+                <div key={i} className="p-2 py-3">
                     <ProjectsContainer title={e.title} image={e.image} description={e.description} deploy={e.deploy} repositorio={e.repositorio}/>
                 </div>
             ))}
