@@ -44,13 +44,13 @@ export default function ProjectsContainer(props: TProject) {
         <p className="text-center">{description}</p>
         <div className="flex justify-around w-full">
           <button
-            className={`${theme.backgroundDeploy} ${theme.textCardProject} font-bold py-2 px-4 rounded  disabled:text-gray-500`}
+            className={`${theme.backgroundDeploy} ${theme.textCardProject} font-bold py-2 px-4 rounded border-b-4 disabled:text-gray-500`}
             disabled={deploy !== null ? false : true}
           >
             {deploy === null ? <p>Deploy</p> : <a target="_blank" href={deploy !== null ? deploy : ""}>Deploy</a>}
           </button>
           <button
-            className={`${theme.backgroundButtonRepositorio} ${theme.textCardProject} font-bold py-2 px-4 rounded  disabled:text-gray-500`}
+            className={`${theme.backgroundButtonRepositorio} ${theme.textCardProject} font-bold py-2 px-4 rounded border-b-4  disabled:text-gray-500`}
             disabled={repositorio !== null ? false : true}
           >
             {repositorio !== null ? <a target="_blank" href={repositorio}>Repositório</a> : ''}

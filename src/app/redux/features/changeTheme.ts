@@ -11,8 +11,9 @@ const lightMode = {
     titleTextProject:'text-orange-600',
     textCardProject:'text-gray-800',
     backgroundCardProjects:'bg-gray-300',
-    backgroundButtonRepositorio:'bg-blue-500 hover:brightness-150',
-    backgroundDeploy:'bg-green-500 hover:brightness-150 disabled:bg-gray-300 disabled:brightness-100',
+    backgroundButtonRepositorio:'bg-blue-500 hover:brightness-150 border-blue-700',
+    backgroundDeploy:'bg-green-500 hover:brightness-150 disabled:bg-gray-300 disabled:brightness-100 border-green-700 disabled:border-b-0',
+    backgroundButtonOverAll:'bg-yellow-500 hover:brightness-150 border-yellow-700',
 }
 
 const darkMode = {
@@ -25,8 +26,10 @@ const darkMode = {
     textAboutMe:'text-gray-800',
     textCardProject:'text-slate-200',
     backgroundCardProjects:'bg-slate-700',
-    backgroundButtonRepositorio:'bg-sky-500 hover:brightness-150',
-    backgroundDeploy:'bg-yellow-500 hover:brightness-150 disabled:bg-slate-700 disabled:brightness-100',
+    backgroundButtonRepositorio:'bg-sky-500 hover:brightness-150 border-sky-700',
+    backgroundDeploy:'bg-teal-500 hover:brightness-150 disabled:bg-slate-700 disabled:brightness-100 border-teal-700 disabled:border-b-0',
+    backgroundButtonOverAll:'bg-amber-500 hover:brightness-150 border-amber-700',
+
 }
 
 

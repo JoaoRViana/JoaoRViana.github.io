@@ -5,7 +5,7 @@ import { useAppSelector } from "@/app/redux/store"
 export default function AboutMe() {
     const theme = useAppSelector((state)=> state.changeReducer.value)
     return(
-        <div className="lg:w-[60%] md:w-full ">
+        <div className="lg:w-[60%] md:w-full" id="aboutMe">
             <h2 className={`text-lg ${theme.textName} mb-2 md:text-center lg:text-start`}
             >João Ricardo - Desenvolvedor Full-Stack</h2>
             <div className={`${theme.backgroundAboutMe} p-4 rounded-lg shadow-md`}>
