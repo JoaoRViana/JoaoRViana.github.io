@@ -1,5 +1,6 @@
 import './globals.css'
 import { Providers } from './redux/provider';
+import favIcon from './icon.png'
 
 
 export const metadata = {
@@ -13,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head>
+        <link rel="shortcut icon" href={favIcon.src} sizes='any'/>
+        </head>
       <body>
         <Providers>
         {children}

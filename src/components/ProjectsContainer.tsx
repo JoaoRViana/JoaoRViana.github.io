@@ -35,12 +35,12 @@ export default function ProjectsContainer(props: TProject) {
 
   return (
     <div className="flex items-center justify-center p-2">
-      <div className={`sm:w-[314px] sm:h-[464px]
+      <div className={`sm:w-[314px] sm:h-[614px]
       md:w-[414px] md:h-[614px] lg:w-[414px] lg:h-[614px] bg-custom-gradient absolute z-0 rounded-lg`}></div>
-      <div className={`sm:w-[300px] sm:h-[450px]
+      <div className={`sm:w-[300px] sm:h-[600px]
       md:w-[400px] md:h-[600px] lg:w-[400px] lg:h-[600px] flex items-center flex-wrap justify-center z-10 ${theme.backgroundCardProjects} ${theme.textCardProject} rounded-lg shadow-md overflow-hidden p-2`}>
         <h1 className={`text-center w-full ${theme.titleTextProject} text-xl`}>{title}</h1>
-        <Image src={image} width={400} height={200} alt={title} />
+        {image !== null?<Image src={image} width={400} height={200} alt={title} />:''}
         <p className="text-center">{description}</p>
         <div className="flex justify-around w-full">
           <button
