@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   return (
-    <div className="w-full flex justify-between p-5 mt-2" id='header'>
+    <div className="w-full flex justify-between mt-2 py-5" id='header'>
       <div>
         <button
           onClick={() => {
@@ -51,8 +51,7 @@ export default function Header() {
           )}
         </button>
       </div>
-      <div className="w-[50%]"></div>
-      <div className="flex justify-between  sm:w-[40%] md:w-[20%] lg:w-[20%]">
+      <div className="flex justify-between w-[70%] md:w-[300px] lg:w-[300px]">
         <button onClick={()=>{scrollTo('projectsSection')}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Projetos</button>
         <button onClick={()=>{scrollTo('certificatesSection')}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Certificados</button>
 

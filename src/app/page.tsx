@@ -11,7 +11,7 @@ import CertificatesSection from "@/components/CertificatesSection"
 export default function Home() {
   const theme = useAppSelector((state)=> state.changeReducer.value)
   return (
-    <main className={`lg:px-[15%] md:px-[10%] sm:px-5 ${theme.background} ${theme.textOverAll} font-semibold absolute`}>
+    <main className={`lg:px-[15%] md:px-[10%] px-5 ${theme.background} ${theme.textOverAll} font-semibold absolute`}>
       <Header />
       
       <div className="flex justify-center lg:justify-between flex-wrap items-center">

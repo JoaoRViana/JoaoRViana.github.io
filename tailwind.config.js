@@ -14,8 +14,8 @@ module.exports = {
       },
       screens:{
         lg:'1250px',
-        md:'500px',
-        sm:'10px'
+        md:'750px', 
+        sm:'400px'
       },
       backgroundImage:{
         'custom-gradient':'linear-gradient(var(--deg), var(--firstColor) 8%, var(--secondColor) 100%)'
