@@ -34,7 +34,7 @@ const darkMode = {
 
 
 const initialState={
-  value: lightMode,
+  value: darkMode,
 };
 
 export const changeTheme = createSlice({

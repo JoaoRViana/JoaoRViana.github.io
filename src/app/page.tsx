@@ -5,6 +5,7 @@ import ProjectsSection from "@/components/ProjectsSection"
 import Contact from "@/components/Contact"
 import { useAppSelector } from "./redux/store"
 import Footer from "@/components/Footer"
+import CertificatesSection from "@/components/CertificatesSection"
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Contact />      
       </div>
       <ProjectsSection />
+      <CertificatesSection />
       <Footer/>
     </main>
   )

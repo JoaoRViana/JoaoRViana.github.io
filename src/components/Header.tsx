@@ -10,8 +10,8 @@ export default function Header() {
   const dispatch = useDispatch<AppDispatch>();
   const theme = useAppSelector((state) => state.changeReducer.value);
 
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projectsSection');
+  const scrollTo = (section:string) => {
+    const projectsSection = document.getElementById(section);
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -52,8 +52,10 @@ export default function Header() {
         </button>
       </div>
       <div className="w-[50%]"></div>
-      <div className="flex justify-around w-[20%]">
-        <button onClick={scrollToProjects} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-4 rounded border-b-4`}>Projetos</button>
+      <div className="flex justify-between  sm:w-[40%] md:w-[20%] lg:w-[20%]">
+        <button onClick={()=>{scrollTo('projectsSection')}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Projetos</button>
+        <button onClick={()=>{scrollTo('certificatesSection')}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Certificados</button>
+
       </div>
     </div>
   );
