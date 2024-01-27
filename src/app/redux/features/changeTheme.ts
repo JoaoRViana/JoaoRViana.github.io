@@ -35,6 +35,7 @@ const darkMode = {
 
 const initialState={
   value: darkMode,
+  section:0,
 };
 
 export const changeTheme = createSlice({
@@ -44,8 +45,13 @@ export const changeTheme = createSlice({
         change: (state) => {
             state.value = state.value.name === 'lightMode' ? darkMode : lightMode;
           },
+        otherSection:(state,param)=>{
+            const {payload} = param
+            state.section = payload
+        }
     }
 })
 
 export const {change} = changeTheme.actions
+export const {otherSection} = changeTheme.actions;
 export default changeTheme.reducer;
