@@ -3,13 +3,32 @@ import Header from "@/components/Header"
 import AboutMe from "@/components/AboutMe"
 import ProjectsSection from "@/components/ProjectsSection"
 import Contact from "@/components/Contact"
+import { AppDispatch } from '@/app/redux/store';
+import { useDispatch } from 'react-redux';
+import { otherSection } from "./redux/features/changeTheme"
 import { useAppSelector } from "./redux/store"
 import Footer from "@/components/Footer"
 import CertificatesSection from "@/components/CertificatesSection"
+import { useState } from "react"
 
 
 export default function Home() {
   const theme = useAppSelector((state)=> state.changeReducer.value)
+  const dispatch = useDispatch<AppDispatch>();
+  const [section,setSection] = useState(
+  [
+  {title:'Meus principais projetos',content: <ProjectsSection />},
+  {title:'Certificados',content: <CertificatesSection />}
+])
+  const number = useAppSelector((state)=>state.changeReducer.section)
+  const changeSection=(value:number)=>{
+    if(value <0){
+      number + value <0?dispatch(otherSection(section.length-1)):dispatch(otherSection(number+value))
+    }
+    else{
+      number +value >= section.length?dispatch(otherSection(0)):dispatch(otherSection(number+value))
+    }
+  }
   return (
     <main className={`lg:px-[15%] md:px-[10%] px-5 ${theme.background} ${theme.textOverAll} font-semibold absolute`}>
       <Header />
@@ -18,8 +37,12 @@ export default function Home() {
       <AboutMe/>
       <Contact />      
       </div>
-      <ProjectsSection />
-      <CertificatesSection />
+      <div className='w-full mt-8 flex justify-center text-xl'>
+        <button onClick={()=>{changeSection(-1)}}>{'<-'}</button>
+                <h1 className='mx-2 '>{section[number].title}</h1>
+                <button onClick={()=>{changeSection(+1)}}>{'->'}</button>
+            </div>
+      {section[number].content}
       <Footer/>
     </main>
   )

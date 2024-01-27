@@ -6,9 +6,6 @@ export default function CertificatesSection(){
     const theme = useAppSelector((state)=> state.changeReducer.value)
     return(
         <div className="mt-8">
-            <div className='w-full'>
-                <h1 className='mx-auto text-center mb-5 text-xl'>Certificados</h1>
-            </div>
             <div className="flex flex-wrap w-full justify-center" id="certificatesSection">
             {allCertificates.map((e,i)=>(
                 <div key={i} className="p-5 py-8 smoothZoom flex justify-center items-center">

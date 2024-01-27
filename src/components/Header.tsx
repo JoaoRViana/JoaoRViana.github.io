@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { change } from '@/app/redux/features/changeTheme';
+import { otherSection } from '@/app/redux/features/changeTheme';
 import { AppDispatch } from '@/app/redux/store';
 import { useAppSelector } from '@/app/redux/store';
 import Image from 'next/image';
@@ -9,13 +10,6 @@ import moon from '../../public/moon.png';
 export default function Header() {
   const dispatch = useDispatch<AppDispatch>();
   const theme = useAppSelector((state) => state.changeReducer.value);
-
-  const scrollTo = (section:string) => {
-    const projectsSection = document.getElementById(section);
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="w-full flex justify-between mt-2 py-5" id='header'>
@@ -52,8 +46,8 @@ export default function Header() {
         </button>
       </div>
       <div className="flex justify-between w-[70%] md:w-[300px] lg:w-[300px]">
-        <button onClick={()=>{scrollTo('projectsSection')}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Projetos</button>
-        <button onClick={()=>{scrollTo('certificatesSection')}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Certificados</button>
+        <button onClick={()=>{dispatch(otherSection(0))}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Projetos</button>
+        <button onClick={()=>{dispatch(otherSection(1))}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Certificados</button>
 
       </div>
     </div>
