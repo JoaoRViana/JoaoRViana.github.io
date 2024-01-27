@@ -12,11 +12,11 @@
     font-family: monospace;
 }
 .smoothZoom:not(:hover) {
-    animation: zoom-out 1s ease-in-out forwards;
+    animation: zoom-out 0.5s ease-in-out forwards;
 }
 
 .smoothZoom:hover {
-    animation: zoom 1s forwards;
+    animation: zoom 0.5s forwards;
 }
 
 @keyframes zoom {

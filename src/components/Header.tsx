@@ -46,9 +46,20 @@ export default function Header() {
         </button>
       </div>
       <div className="flex justify-between w-[70%] md:w-[300px] lg:w-[300px]">
-        <button onClick={()=>{dispatch(otherSection(0))}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Projetos</button>
-        <button onClick={()=>{dispatch(otherSection(1))}} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Certificados</button>
-
+        <button onClick={()=>{
+          dispatch(otherSection(0))
+          const projectsSection = document.getElementById('sections');
+          if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
+          }
+          }} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Projetos</button>
+        <button onClick={()=>{
+          dispatch(otherSection(1))
+          const projectsSection = document.getElementById('sections');
+          if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
+          }
+          }} className={`${theme.backgroundButtonOverAll} font-bold py-2 px-2 rounded border-b-4`}>Certificados</button>
       </div>
     </div>
   );

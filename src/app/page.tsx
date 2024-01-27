@@ -30,19 +30,19 @@ export default function Home() {
     }
   }
   return (
-    <main className={`lg:px-[15%] md:px-[10%] px-5 ${theme.background} ${theme.textOverAll} font-semibold absolute`}>
+    <main className={`lg:px-[15%] md:px-[10%] px-5 ${theme.background} ${theme.textOverAll} styledText absolute`}>
       <Header />
       
       <div className="flex justify-center lg:justify-between flex-wrap items-center">
       <AboutMe/>
       <Contact />      
       </div>
-      <div className='w-full mt-8 flex justify-center text-xl'>
+      <div className='w-full mt-8 flex justify-center text-xl' id="sections">
         <button onClick={()=>{changeSection(-1)}}>{'<-'}</button>
                 <h1 className='mx-2 '>{section[number].title}</h1>
                 <button onClick={()=>{changeSection(+1)}}>{'->'}</button>
             </div>
-      {section[number].content}
+            {section[number].content}
       <Footer/>
     </main>
   )
