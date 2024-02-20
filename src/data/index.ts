@@ -70,9 +70,9 @@ export const allCertificates = [{
 },{
     title: 'Certificado Java',
     image: javaCertificate,
-    links: links.java
+    link: links.java
 },{
     title: 'Certificado Full-Stack',
     image:fullStackCertificate,
-    links:links.full
+    link:links.full
 }]

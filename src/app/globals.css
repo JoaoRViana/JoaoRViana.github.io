@@ -34,9 +34,8 @@
 
 .renderEffect{
     position: absolute;
-    width: 90%;
+    width: 100%;
     z-index: 40;
-    border-bottom: var(--firstColor) 2px  solid;
     animation: lineEffect 2s forwards;
   }
 
