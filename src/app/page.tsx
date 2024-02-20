@@ -35,7 +35,6 @@ export default function Home() {
     const effect = document.createElement('div');
     effect.id='effect'
     const background = theme.name == 'lightMode'?'rgb(226 232 240)':'black'
-    console.log(background)
     effect.style.background = background
     effect.className='renderEffect'
     if(sections){
