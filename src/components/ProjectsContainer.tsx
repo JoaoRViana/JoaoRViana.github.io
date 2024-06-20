@@ -9,7 +9,7 @@ export default function ProjectsContainer(props: TProject) {
   const theme = useAppSelector((state)=> state.changeReducer.value)
 
   return (
-    <div className="flex items-center justify-center p-2" >
+    <div className="flex items-center justify-center p-2 smoothZoom" >
       <div id={id} className={`w-[284px] h-[614px]
       md:w-[414px] md:h-[614px] lg:w-[414px] lg:h-[614px] absolute z-0 rounded-lg`}></div>
       <div className={`w-[270px] h-[600px]

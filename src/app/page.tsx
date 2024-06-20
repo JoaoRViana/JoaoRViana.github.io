@@ -5,7 +5,7 @@ import ProjectsSection from "@/components/ProjectsSection"
 import Contact from "@/components/Contact"
 import { AppDispatch } from '@/app/redux/store';
 import { useDispatch } from 'react-redux';
-import { otherSection } from "./redux/features/changeTheme"
+import { otherSection} from "./redux/features/changeTheme"
 import { useAppSelector } from "./redux/store"
 import Footer from "@/components/Footer"
 import CertificatesSection from "@/components/CertificatesSection"
@@ -31,19 +31,14 @@ export default function Home() {
     }
   }
   const renderEffect= ()=>{
-    const sections= document.getElementById('sections');
-    const effect = document.createElement('div');
-    effect.id='effect'
-    const background = theme.name == 'lightMode'?'rgb(226 232 240)':'black'
-    effect.style.background = background
-    effect.className='renderEffect'
-    if(sections){
-      sections.appendChild(effect)
+    const effect = document.getElementById("lineEffect")
+    if(effect){
+      effect.classList.add("renderEffect")
       setTimeout(()=>{
-          sections.removeChild(effect)
+          effect?.classList.remove("renderEffect")
       },2000)
     }
-}
+  }
   useEffect(()=>{
     if(selectSection !== number){
       setTimeout(()=>{
@@ -61,6 +56,7 @@ export default function Home() {
       <Contact />      
       </div>
       <div className='w-full mt-8 flex justify-center text-xl text-center' id="sections">
+        <div id="lineEffect" className={`${theme.background} `}></div>
         <button className="arrowBttn" onClick={()=>{changeSection(-1)}}>{'<-'}</button>
                 <h1 className='mx-2 '>{section[selectSection].title}</h1>
                 <button className="arrowBttn" onClick={()=>{changeSection(+1)}}>{'->'}</button>
