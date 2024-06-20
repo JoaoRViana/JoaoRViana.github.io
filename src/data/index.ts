@@ -1,6 +1,5 @@
 import pokedexGif from '../../public/projectGifs/pokedex.gif'
 import pokeCardGif from '../../public/projectGifs/pokeCard.gif'
-import mercadoLivreGif from '../../public/projectGifs/mercadoLivre.gif'
 import forcaGif from '../../public/projectGifs/forca.gif'
 import fullStackCertificate from '../../public/certificates/certificado_fullStack.png';
 import googleCertificate from '../../public/certificates/certificado_google.jpg';
@@ -15,18 +14,18 @@ const links = {
 
 export const allProjects = [
     {
+        title:"Check-in",
+        description:"Esta é uma ferramenta de disponibilidade desenvolvida para desenvolvedores, que permite indicar claramente sua disponibilidade no trabalho. Dentro da plataforma, você encontrará uma interface intuitiva, onde poderá fazer check-in para indicar que está ativo e disponível para receber tarefas ou mudar seu status para 'BRB' se precisar de uma pausa ou não estiver disponível.",
+        image:null,
+        deploy:null,
+        repositorio:"https://github.com/lexart-labs/check-in"
+    },
+    {
         title:"Pokédex",
         description:"Este é um aplicativo Pokedex criado em React que permite ao usuário visualizar informações detalhadas sobre diferentes Pokémons. O usuário pode favoritar, ver a forma shiny, ver os pokemons da região específica, filtrar por tipagem, ver status, habilidades e uma breve descrição do Pokemon. Além disso, também é possível buscar Pokémons pelo nome ou número da Pokédex.",
         image:pokedexGif,
         deploy:"https://pokedex-joaorviana.vercel.app",
         repositorio:"https://github.com/JoaoRViana/pokedex",
-    },
-    {
-        title:"ShoppingCart",
-        description:"O site de compras é uma plataforma que permite aos usuários pesquisar, visualizar e 'comprar' produtos disponíveis na API do Mercado Livre. Ele utiliza o React como biblioteca de desenvolvimento de interfaces de usuário, o Redux para gerenciar o estado global da aplicação e o Tailwind CSS para estilizar os componentes.",
-        image:mercadoLivreGif,
-        deploy:null,
-        repositorio:"https://github.com/JoaoRViana/shoppingCart",
     },
     {
         title:"PokeCard",
@@ -47,7 +46,7 @@ export const allProjects = [
     image:null,
     deploy:null,
     repositorio:"https://github.com/JoaoRViana/pokeCardApi",
-    }
+    },
 ]
 
 export const allCertificates = [{

@@ -18,7 +18,7 @@ export default function Home() {
   const [selectSection,setSelectSection] = useState(0)
   const [section,setSection] = useState(
   [
-  {title:'Meus principais projetos',content: <ProjectsSection />},
+  {title:'Principais projetos',content: <ProjectsSection />},
   {title:'Certificados',content: <CertificatesSection />}
 ])
   const number = useAppSelector((state)=>state.changeReducer.section)
