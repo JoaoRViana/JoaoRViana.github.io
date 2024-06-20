@@ -14,11 +14,11 @@ export default function CertificatesContainer(props:TCertificates){
             ></div><div className={`w-[270px] h-[360px]
             md:w-[560px] md:h-[500px] lg:w-[560px] lg:h-[500px] flex items-center flex-wrap justify-center z-10 
             ${theme.backgroundCardProjects} ${theme.textCardProject} rounded-lg shadow-md overflow-hidden p-2`}
-            onMouseOver={() => {
+            onMouseEnter={() => {
                 let border = document.getElementById(id);
                 border?.classList.add('bg-custom-gradient')
                intervals.push(borderEffect());
-              }} onMouseOut={()=>{
+              }} onMouseLeave={()=>{
                 let border = document.getElementById(id);
                 border?.classList.remove('bg-custom-gradient')
                 stopBorderEffect(intervals)
