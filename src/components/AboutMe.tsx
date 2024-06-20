@@ -10,7 +10,8 @@ export default function AboutMe() {
             >João Ricardo - Desenvolvedor Full-Stack</h2>
             <div className={`${theme.backgroundAboutMe} p-4 rounded-lg shadow-md`}>
             <p className={`text-base ${theme.textAboutMe}`}>
-            Durante meu período de estudos, adquiri experiência substancial em desenvolvimento full-stack, integração de API's, administração de bancos de dados e aplicação dos princípios SOLID. Minhas habilidades abrangem Typescript, Javascript ES6, ReactJS, NextJS, Node.js, Express, Docker, MySQL e ferramentas de teste como Mocha, Chai e Jest.
+            Durante meus estudos, adquiri conhecimento em desenvolvimento full-stack, integração de APIs, administração de bancos de dados e aplicação dos princípios SOLID. Minhas habilidades incluem Typescript, JavaScript ES6, ReactJS, NextJS, Node.js, Express, Docker, MySQL e ferramentas de teste como Mocha, Chai e Jest.
+            Trabalhei com a empresa Lexart em um projeto open source, onde utilizei Vue, Vuetify e Firebase. Para a realização dos testes, utilizei Mocha, Chai e Sinon.
             </p>
             </div>
         </div>
