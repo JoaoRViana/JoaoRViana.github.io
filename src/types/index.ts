@@ -6,3 +6,9 @@ export type TProject ={
     repositorio:string,
     id:string,
 }
+export type TCertificates ={
+    image:any,
+    link:string,
+    title:string,
+    id:string,
+}
