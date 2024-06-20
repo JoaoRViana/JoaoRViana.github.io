@@ -22,7 +22,7 @@ export default function CertificatesContainer(props:TCertificates){
                 border?.classList.remove('bg-custom-gradient')
               }}>
                 <a href={link} target="_blank" className="">
-                    <Image src={image} width={580} height={400} alt={title} className="rounded-lg" />
+                    <Image src={image}  alt={title} className="rounded-lg" />
                 </a>
             </div></>
     )
