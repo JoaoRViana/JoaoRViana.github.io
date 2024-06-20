@@ -2,7 +2,7 @@
 import { TProject } from "@/types";
 import Image from "next/image";
 import { useAppSelector } from "@/app/redux/store";
-import { borderEffect,stopBorderEffect } from "@/helper";
+import { borderEffect,stopBorderEffect,redirect } from "@/helper";
 
 export default function ProjectsContainer(props: TProject) {
   const { description, title, image, deploy, repositorio,id } = props;
@@ -31,14 +31,20 @@ export default function ProjectsContainer(props: TProject) {
           <button
             className={`${theme.backgroundDeploy} ${theme.textCardProject} font-bold py-2 px-4 rounded border-b-4 disabled:text-gray-500`}
             disabled={deploy !== null ? false : true}
+            onClick={()=>{
+              redirect(deploy)
+            }}
           >
-            {deploy === null ? <p>Deploy</p> : <a target="_blank" href={deploy !== null ? deploy : ""}>Deploy</a>}
+            deploy
           </button>
           <button
             className={`${theme.backgroundButtonRepositorio} ${theme.textCardProject} font-bold py-2 px-4 rounded border-b-4  disabled:text-gray-500`}
             disabled={repositorio !== null ? false : true}
+            onClick={()=>{
+              redirect(repositorio)
+            }}
           >
-            {repositorio !== null ? <a target="_blank" href={repositorio}>Repositório</a> : ''}
+            Repositório
           </button>
         </div>
       </div>

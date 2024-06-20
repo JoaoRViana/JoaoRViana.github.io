@@ -1,7 +1,7 @@
 import { TCertificates } from "@/types"
 import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image"
-import { borderEffect,stopBorderEffect } from "@/helper";
+import { borderEffect,stopBorderEffect,redirect } from "@/helper";
 
 export default function CertificatesContainer(props:TCertificates){
     const {link,title,image,id}=props
@@ -24,9 +24,9 @@ export default function CertificatesContainer(props:TCertificates){
                 stopBorderEffect(intervals)
                 intervals=[]
               }}>
-                <a href={link} target="_blank" className="">
-                    <Image src={image}  alt={title} className="rounded-lg" />
-                </a>
+                <Image src={image}  alt={title} className="rounded-lg cursor-pointer" onClick={()=>{
+                  redirect(link)
+                }} />
             </div></>
     )
 }

@@ -24,3 +24,9 @@ export const stopBorderEffect=(array:any)=>{
     document.documentElement.style.setProperty("--deg", '1deg');
 
 }
+
+export const redirect=(url:string|null)=>{
+    if(url){
+        window.open(url, '_blank');
+    }
+}
