@@ -18,7 +18,7 @@ const lightMode = {
 
 const darkMode = {
     name:'darkMode',
-    background: 'bg-black',
+    background: 'bg-gray-900',
     textName:'text-green-500',
     textOverAll:'text-gray-200',
     backgroundAboutMe:'bg-gray-300',

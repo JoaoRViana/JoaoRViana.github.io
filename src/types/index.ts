@@ -4,4 +4,5 @@ export type TProject ={
     image:any,
     deploy:string|null,
     repositorio:string,
+    id:string,
 }
