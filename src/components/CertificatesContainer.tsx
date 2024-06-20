@@ -1,11 +1,12 @@
 import { TCertificates } from "@/types"
 import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image"
-import { borderEffect } from "@/helper";
+import { borderEffect,stopBorderEffect } from "@/helper";
 
 export default function CertificatesContainer(props:TCertificates){
     const {link,title,image,id}=props
     const theme = useAppSelector((state)=> state.changeReducer.value)
+    let intervals: NodeJS.Timeout[] = []
 
     return(
         <><div id={id} className={`w-[284px] h-[374px]
@@ -16,10 +17,12 @@ export default function CertificatesContainer(props:TCertificates){
             onMouseOver={() => {
                 let border = document.getElementById(id);
                 border?.classList.add('bg-custom-gradient')
-                borderEffect();
-              }}  onMouseOut={()=>{
+               intervals.push(borderEffect());
+              }} onMouseOut={()=>{
                 let border = document.getElementById(id);
                 border?.classList.remove('bg-custom-gradient')
+                stopBorderEffect(intervals)
+                intervals=[]
               }}>
                 <a href={link} target="_blank" className="">
                     <Image src={image}  alt={title} className="rounded-lg" />

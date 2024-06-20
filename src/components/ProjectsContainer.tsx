@@ -2,12 +2,12 @@
 import { TProject } from "@/types";
 import Image from "next/image";
 import { useAppSelector } from "@/app/redux/store";
-import { borderEffect } from "@/helper";
+import { borderEffect,stopBorderEffect } from "@/helper";
 
 export default function ProjectsContainer(props: TProject) {
   const { description, title, image, deploy, repositorio,id } = props;
   const theme = useAppSelector((state)=> state.changeReducer.value)
-
+  let intervals: NodeJS.Timeout[] = []
   return (
     <div className="flex items-center justify-center p-2 smoothZoom" >
       <div id={id} className={`w-[284px] h-[614px]
@@ -17,10 +17,12 @@ export default function ProjectsContainer(props: TProject) {
       onMouseOver={() => {
         let border = document.getElementById(id);
         border?.classList.add('bg-custom-gradient')
-        borderEffect();
+        intervals.push(borderEffect());
       }}  onMouseOut={()=>{
         let border = document.getElementById(id);
         border?.classList.remove('bg-custom-gradient')
+        stopBorderEffect(intervals)
+        intervals=[]
       }}>
         <h1 className={`text-center w-full ${theme.titleTextProject} text-xl`}>{title}</h1>
         {image !== null?<Image src={image} width={400} height={200} alt={title} />:''}
