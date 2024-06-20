@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const lightMode = {
+export const lightMode = {
     name:'lightMode',
     background: 'bg-slate-200',
     textName:'text-blue-500',
@@ -16,9 +16,9 @@ const lightMode = {
     backgroundButtonOverAll:'bg-yellow-500 hover:brightness-150 border-yellow-700',
 }
 
-const darkMode = {
+export const darkMode = {
     name:'darkMode',
-    background: 'bg-black',
+    background: 'bg-gray-900',
     textName:'text-green-500',
     textOverAll:'text-gray-200',
     backgroundAboutMe:'bg-gray-300',

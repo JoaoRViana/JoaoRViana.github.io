@@ -4,8 +4,8 @@
 
 :root{
     --firstColor:rgb(78, 218, 78);
-    --secondColor:rgb(21, 58, 21);
-    --deg:10deg;
+    --secondColor:rgb(17 24 39);
+    --deg:1deg;
 }
 
 .styledText {

@@ -18,7 +18,7 @@ module.exports = {
         sm:'400px'
       },
       backgroundImage:{
-        'custom-gradient':'linear-gradient(var(--deg), var(--firstColor) 8%, var(--secondColor) 100%)'
+        'custom-gradient':'linear-gradient(var(--deg), var(--firstColor) 18%, var(--secondColor) 70%)'
       }
     },
   },

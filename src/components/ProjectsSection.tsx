@@ -9,7 +9,7 @@ export default function ProjectsSection(){
             <div className="flex flex-wrap w-full justify-center" id="projectsSection">
             {allProjects.map((e,i)=>(
                 <div key={i} className="p-2 py-3">
-                    <ProjectsContainer title={e.title} image={e.image} description={e.description} deploy={e.deploy} repositorio={e.repositorio}/>
+                    <ProjectsContainer id={`projectId${i}`} title={e.title} image={e.image} description={e.description} deploy={e.deploy} repositorio={e.repositorio}/>
                 </div>
             ))}
             </div>
