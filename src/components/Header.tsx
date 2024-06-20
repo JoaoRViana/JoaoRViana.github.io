@@ -24,7 +24,7 @@ export default function Header() {
               );
               document.documentElement.style.setProperty(
                 '--secondColor',
-                'rgb(21, 58, 21)'
+                'rgb(17 24 39)'
               );
             } else {
               document.documentElement.style.setProperty(
@@ -33,7 +33,7 @@ export default function Header() {
               );
               document.documentElement.style.setProperty(
                 '--secondColor',
-                'rgb(5, 24, 49)'
+                'rgb(229 231 235)'
               );
             }
           }}

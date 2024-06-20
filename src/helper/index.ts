@@ -1,11 +1,10 @@
 export const borderEffect=()=>{
-    let deg = 10;
     
     const styledBorder = () => {
       if (typeof window !== "undefined") {
         const rootStyles = window.getComputedStyle(document.documentElement);
         const degValue = rootStyles.getPropertyValue("--deg");
-        deg = +degValue.replace("deg", "");
+        let deg = +degValue.replace("deg", "");
         deg += 1;
 
         if (deg >= 360) {
