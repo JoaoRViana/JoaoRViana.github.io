@@ -3,14 +3,8 @@ import pokeCardGif from '../../public/projectGifs/pokeCard.gif'
 import forcaGif from '../../public/projectGifs/forca.gif'
 import fullStackCertificate from '../../public/certificates/certificado_fullStack.png';
 import googleCertificate from '../../public/certificates/certificado_google.jpg';
-
-
-
-
-const links = {
-    full:'https://www.credential.net/4900b592-b687-4b82-909b-2818c236a25c#gs.3co10p',
-    google:'https://www.coursera.org/account/accomplishments/specialization/certificate/YGYAKGHX8QLL'
-}
+import dioCertificate from '../../public/certificates/certificado_dio_angular.png';
+import serviceNowCertificate from '../../public/certificates/certificado_service_now.png';
 
 export const allProjects = [
     {
@@ -52,9 +46,17 @@ export const allProjects = [
 export const allCertificates = [{
     title: 'Certificado Full-Stack',
     image:fullStackCertificate,
-    link:links.full
+    link:'https://www.credential.net/4900b592-b687-4b82-909b-2818c236a25c#gs.3co10p'
 },{
     title: 'Certificado Profissional de Análise de Dados do Google',
     image:googleCertificate,
-    link:links.google,
+    link:'https://www.coursera.org/account/accomplishments/specialization/certificate/YGYAKGHX8QLL',
+},{
+    title: 'Certificado Bootcamp Shark in ServiceNow',
+    image: serviceNowCertificate,
+    link:'https://drive.google.com/file/d/1t6wHdz6dgpn9AItS582l7ZWcN7886J0x/view'
+},{
+    title: 'Certificado Deal - Spring Boot e Angular',
+    image:dioCertificate,
+    link:'https://drive.google.com/file/d/1aXYuUilgA95b5ch8ef7K_vWs3XmV9A-N/view?usp=drive_link'
 }]
